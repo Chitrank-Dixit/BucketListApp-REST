@@ -1,6 +1,6 @@
 angular.module('bucketList.controllers', ['bucketList.services'])
 
-.controller('SignInCtrl', function ($rootScope, $scope, API, $window) {
+.controller('SignInCtrl', function ($rootScope, $scope, API, $window,$ionicLoading) {
     // if the user is already logged in, take him to his bucketlist
     if ($rootScope.isSessionActive()) {
         $window.location.href = ('#/bucket/list');
@@ -34,7 +34,7 @@ angular.module('bucketList.controllers', ['bucketList.services'])
 
 })
 
-.controller('SignUpCtrl', function ($rootScope, $scope, API, $window) {
+.controller('SignUpCtrl', function ($rootScope, $scope, API, $window, $ionicLoading) {
     $scope.user = {
         email: "",
         password: "",

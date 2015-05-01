@@ -1,6 +1,9 @@
-<ion-header-bar class="bar-positive">
+<ion-header-bar class="bar bar-header bar-positive">
    <h1 class="title">Completed Items</h1>
+   <div class="buttons">
    <button class="button button-clear" ng-click="logout()">Logout</button>
+   </div>
+
 </ion-header-bar>
 <ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
    <ion-refresher ng-hide="noData || incomplete" on-refresh="doRefresh('2')"></ion-refresher>
