@@ -1,10 +1,10 @@
-<ion-header-bar class="bar bar-header bar-positive">
-   <h1 class="title">Completed Items</h1>
-   <div class="buttons">
-   <button class="button button-clear" ng-click="logout()">Logout</button>
-   </div>
 
-</ion-header-bar>
+   <ion-view title="Completed Items" class="bar bar-positive">
+   <ion-nav-buttons side="right">
+   <a class="button button-clear" ng-click="logout()">Logout</a>
+   </ion-nav-buttons>
+   </ion-view>
+
 <ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
    <ion-refresher ng-hide="noData || incomplete" on-refresh="doRefresh('2')"></ion-refresher>
    <div class="card" ng-repeat="item in list" >

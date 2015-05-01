@@ -1,8 +1,11 @@
-<ion-header-bar class="bar bar-header bar-positive">
+<ion-view title="My Bucket List" class="bar bar-positive">
+   <ion-nav-buttons side="left">
    <button class="button button-clear" ng-click="newTask()">New</button>
-   <h1 class="title">My Bucket List</h1>
+   </ion-nav-buttons>
+   <ion-nav-buttons side="right">
    <button class="button button-clear" ng-click="logout()">Logout</button>
-</ion-header-bar>
+   </ion-nav-buttons>
+</ion-view>
 
 <ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
    <ion-refresher ng-hide="noData" on-refresh="doRefresh('1')"></ion-refresher>
